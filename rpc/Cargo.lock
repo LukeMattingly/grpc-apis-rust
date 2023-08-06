@@ -600,7 +600,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "solar_system_grpc"
+name = "solar-system-info-rpc"
 version = "0.1.0"
 dependencies = [
  "prost",

@@ -1,18 +1,18 @@
-syntax = "proto3"
+syntax = "proto3";
 
 package solar_system_info;
 
-import "google/protobuf/timestamp.proto"
+import "google/protobuf/timestamp.proto";
 
-import "google/protobuf/empty.proto"
+import "google/protobuf/empty.proto";
 
 service SolarSystemInfo{
-    rpc GetPlanetsList (google.protobuf.Empty) returns (PlantsListResponse)
-    rpc GetPlanet (PlanetRequest) returns (PlanetResponse)
-    rpc GetPlanets (google.protobuf.Empty) returns (stream PlanetResponse) 
+    rpc GetPlanetsList (google.protobuf.Empty) returns (PlantsListResponse);
+    rpc GetPlanet (PlanetRequest) returns (PlanetResponse);
+    rpc GetPlanets (google.protobuf.Empty) returns (stream PlanetResponse);
 }
 
-message PlantsListResponse{
+message PlantsListResponse {
     repeated string list = 1;
 }
 
@@ -21,7 +21,7 @@ message PlanetRequest{
 }
 
 message PlanetResponse{
-    Planet planet =1;
+    Planet planet = 1;
 }
 
 message Planet{
@@ -30,8 +30,8 @@ message Planet{
     Type type = 3;
     float meanRadius = 4;
     float mass = 5;
-    repeasted Satellite satellites = 6;
-    bytes image =7;
+    repeated Satellite satellites = 6;
+    bytes image = 7;
 }
 
 enum Type{
