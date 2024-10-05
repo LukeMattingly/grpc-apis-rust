@@ -24,11 +24,11 @@ use solar_system_info_rpc::solar_system_info::{
 };
 
 #[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error:Error>>{
-    dotenv().ok()
+async fn main() -> Result<(), Box<dyn std::error::Error>>{
+    dotenv().ok();
     env_logger::init();
 
-    info!("Starting Solar System info server")
+    info!("Starting Solar System info server");
 
     let addr = std::env::var("GRPC_SERVER_ADDRESS")?.parse()?;
 
